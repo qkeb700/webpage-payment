@@ -1,0 +1,121 @@
+@import url('all.css');
+@import url('animate.css');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  padding: 8px;
+}
+.container {
+  background-color: #f2f2f2;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 5px 20px 15px 20px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+.d-flex {
+  display: flex;
+  flex: row wrap;
+}
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+/* 고객정보 */
+span.price {
+  float: right;
+  color: grey;
+}
+hr {
+  border: 1px solid lightgrey;
+}
+.border-bottom {
+  border-bottom: 150px solid grey;
+  padding-bottom: 15px;
+}
+span.total-price {
+  float: right;
+  font-weight: bold;
+}
+input[type="text"], input[type="password"],
+input[type="date"], input[type="submit"] {
+  border-radius: 3px;
+  width: 100%;
+  /* line-height: 40px; */
+  padding: 12px;
+  border: 1px solid lightgrey;
+  margin-bottom: 20px;
+}
+/* 지불정보 */
+input[type=radio] {
+  display: none;
+}
+input[type=radio]:checked + label>i {
+  border: 1px solid #333;
+}
+.fab {
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+.fa-cc-visa {
+  color: rgb(34, 34, 63);
+}
+.fa-cc-amex {
+  color: rgb(63, 63, 204);
+}
+.fa-cc-mastercard {
+  color: rgb(168, 51, 51);
+}
+.fa-cc-discover {
+  color: rgb(143, 155, 41);
+}
+input[type=radio]:checked + label>i.fa-cc-visa {
+  color: navy;
+}
+input[type=radio]:checked + label>i.fa-cc-amex {
+  color: blue;
+}
+input[type=radio]:checked + label>i.fa-cc-mastercard {
+  color: red;
+}
+input[type=radio]:checked + label>i.fa-cc-discover {
+  color: gold;
+}
+#card-name {
+  font-size: 20px;
+}
+
+.agreetext {
+  display: inline-block;
+}
+.btn:hover {
+  color: #333;
+}
