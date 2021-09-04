@@ -7,6 +7,7 @@
   <img src='https://img.shields.io/static/v1?label=CSS3&message=.&color=blue'/>
   <img src='https://img.shields.io/static/v1?label=Javascript&message=1.8&color=yellow'/>
   <img src='https://img.shields.io/static/v1?label=bootstrap&message=.&color=orange'/>
+  <img src='https://img.shields.io/static/v1?label=API&message=.&color=success'/>
 </p>
 
 ## 개발환경
