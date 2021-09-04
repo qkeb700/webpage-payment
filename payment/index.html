@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제창</title>
+    <link rel="stylesheet" href="../css/plugin/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2 class="text-center">반응형으로 만든 결제창</h2>
+    <p class="text-center">800px에서 화면이 1줄로 보이게 처리</p>
+    <!-- <div class="row"> -->
+        <!-- <div class="col-75"> -->
+            <div class="container">
+                <form name="priceForm" action="/action_page.jsp" method="POST" onsubmit="return checkForm()">
+                    <input type="hidden" name="price[]" value="250000">
+                    <input type="hidden" name="price[]" value="150000">
+                    <input type="hidden" name="price[]" value="100000">
+                    <input type="hidden" name="price[]" value="100000">
+                    <input type="hidden" name="totalprice" value="600000">
+                    <h4>주문상품 <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+                    <p><a href="#">상품 1</a> <span class="price">250,000원</span></p>
+                    <p><a href="#">상품 2</a> <span class="price">150,000원</span></p>
+                    <p><a href="#">상품 3</a> <span class="price">100,000원</span></p>
+                    <p><a href="#">상품 4</a> <span class="price">100,000원</span></p>
+                    <hr>
+                    <p><a href="#" style="color: black;">Total</a> <span class="total-price">600,000원</span></p>
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>고객 정보</h3>
+                            <label for="uname"><i class="fas fa-user"></i> 이름</label>
+                            <input type="text" name="username" id="uname" placeholder="성 이름">
+                            
+                            <label for="email"><i class="fas fa-envelope"></i> 이메일</label>
+                            <input type="text" id="email" name="email" placeholder="john@example.com">
+                            
+                            <label for="address1"><i class="far fa-address-card"></i> 주소</label>
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="zipcode">우편번호</label>
+                                    <input type="text" id="zipcode" name="state" onclick="postCode()" readonly placeholder="우편번호">
+                                </div>
+                                <div class="col-50"></div>
+                            </div>
+                            <label for=""><i class="fas fa-university"></i> 주소입력</label>
+                            <input type="text" id="address1" name="address1" placeholder="주소">
+                            <input type="text" id="address2" name="address2" placeholder="상세주소">
+                        </div>
+                        <div class="col-50">
+                            <h3>지불정보</h3>
+                            <label for="uname">카드선택</label>
+                            <div class="cardbox d-flex">
+                                <div class="col-50">
+                                    <input type="radio" name="card" id="visa" value="visa" checked onclick="showcard()">
+                                    <label for="visa"><i class="fab fa-cc-visa"></i></label>
+                                    
+                                    <input type="radio" name="card" id="amex" value="amex" onclick="showcard()">
+                                    <label for="amex"><i class="fab fa-cc-amex"></i></label>
+                                    
+                                    <input type="radio" name="card" id="master" value="mastercard" onclick="showcard()">
+                                    <label for="master"><i class="fab fa-cc-mastercard"></i></label>
+                                    
+                                    <input type="radio" name="card" id="discover" value="discover" onclick="showcard()">
+                                    <label for="discover"><i class="fab fa-cc-discover"></i></label>
+                                </div>
+                                <div class="col-50">
+                                    <p id="card-name">visa</p>
+                                </div>
+                            </div>
+                            <label for="card-owner">결제자이름</label>
+                            <input type="text" id="card-owner" name="cardname" placeholder="홍길동">
+                            <label for="card-number">카드번호</label>
+                            <input type="text" id="card-number" placeholder="1111-2222-3333-4444">
+                            <label for="usedate">사용년월일</label>
+                            <input type="date" name="expyear" id="usedate">
+                            <label for="two-password">비밀번호뒤 두자리</label>
+                            <input type="password" name="pass" id="two-password" placeholder="**">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="000">
+
+                        </div>
+                    </div>
+                    <label>
+                        <input type="checkbox" checked>
+                        <p class="agreetext">위 내용을 보내는데 동의 합니다.</p>
+                    </label>
+                    <input type="submit" class="btn btn-success" value="결제하기">
+                </form>
+            </div>
+        <!-- </div>
+    </div> -->
+    <script src="../js/plugin/jquery-3.6.0.js"></script>
+    <script src="../js/plugin/jquery-migrate-3.3.2.js"></script>
+    <script src="../js/plugin/popper.min.js"></script>
+    <script src="../js/plugin/bootstrap.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
